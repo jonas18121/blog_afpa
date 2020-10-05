@@ -115,27 +115,31 @@ li{
     font-weight: bold;
 }
 
+.menu_li:hover{
+    background-color: rgba(102, 102, 102, 0.5);
+}
+
 nav li:hover .sous_menu_ul{
     display: block;
     position: absolute;
     z-index:  1;
     background-color: var(--brown);
-    top: 20px; 
-    left: 0px;
+    top: 30px; 
+    left: 20px;
 }
 
-.sous_menu_ul{
+.sous_menu_ul {
     display: none;
+}
+
+.sous_menu_ul .sous_menu_li{
+    display: block;
+    
 }
 
 ul.sous_menu_ul{
     width: 100%;
     padding: 0;
-    left: 20px;
-}
-
-.sous_menu_ul .sous_menu_li{
-    display: block;
 }
 
 
@@ -208,6 +212,11 @@ section > div > p{
         z-index:1;
     }
 
+    nav li:hover .sous_menu_ul{
+        top: 20px;
+        left: 200px;
+    }
+
     /* ------------------- burger ---------------------- */
 
     /* Animations pour le menu slide */
@@ -228,7 +237,6 @@ section > div > p{
             left:-25%;
         }
     }
-
 
     /* ------------------- F O O T E R ---------------------- */
 
