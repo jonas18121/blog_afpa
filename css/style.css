@@ -65,7 +65,7 @@ li{
 #style_burger{
     position: absolute;
     position: fixed;
-    top: 2.5rem;
+    top: 1.5rem;
     right: 3.5rem;
     display: inline-block;
     cursor: pointer;
@@ -133,8 +133,7 @@ nav li:hover .sous_menu_ul{
 }
 
 .sous_menu_ul .sous_menu_li{
-    display: block;
-    
+    display: block;   
 }
 
 ul.sous_menu_ul{
