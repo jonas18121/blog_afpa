@@ -1,0 +1,233 @@
+/***********css par défaut mobile ********************/
+
+/* GLOBAL */
+
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+
+html{
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem; 
+    width: 100%;
+}
+
+img, video, table{
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+    margin: 0.2rem;
+    color: #fff;
+}
+
+table{
+    width: 100%;
+}
+
+/* ------------------- M E N U ---------------------- */
+
+/* menu en laterale */
+nav{
+    position: fixed;
+    left: -100%;
+    top: auto;
+    background-color: brown;
+    padding: 4rem 2rem;
+    width: 100%;
+    min-height: 100%;
+    box-shadow: 3px 3px rgba(102, 102, 102, 0.1);
+}
+
+ul{
+    margin: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+/* ------------------- burger ---------------------- */
+
+#style_burger{
+    position: absolute;
+    position: fixed;
+    top: 2.5rem;
+    right: 3.5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* .style_burger:hover{
+    opacity: 75;
+    transition: 0.5s;
+    background-color: red;
+} */
+
+#menu_nav.visible{
+    animation: 1.5s slideRight ease-in forwards;
+    transition-delay: 3s ;
+}
+
+#menu_nav.invisible{
+    animation: 1.5s slideLeft ease-out forwards;
+    transition-delay: 3s ;
+}
+
+
+
+/* Animations pour le menu slide */
+@keyframes slideRight {
+	from {
+        left:-100%;
+    }
+	to {
+        left:0%;
+    }
+}
+
+@keyframes slideLeft {
+	from {
+        left:0%;
+    }
+	to {
+        left:-100%;
+    }
+}
+
+/* --------- sous menu -------- */
+
+.menu_li{
+    position: relative;
+}
+
+.menu_li, .sous_menu_li{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+nav li:hover .sous_menu_ul{
+    display: block;
+    position: absolute;
+    z-index:  1;
+    background-color: brown;
+    top: 20px; 
+    left: 0px;
+}
+
+.sous_menu_ul{
+    display: none;
+}
+
+ul.sous_menu_ul{
+    width: 100%;
+    padding: 0;
+    left: 20px;
+}
+
+.sous_menu_ul .sous_menu_li{
+    display: block;
+}
+
+
+/* ---- design burger ------- */
+#style_burger .bar_1, #style_burger .bar_2, #style_burger .bar_3{
+    width: 3.2rem;
+    height: 0.2rem;
+    background-color: black;
+    margin: 0.6rem 0;
+    transition: 0.4s;
+}
+
+/* ---- design burger au click ------- */
+#style_burger.clicked .bar_1 {
+    transform:rotate(-45deg) translate(-5px, 7px);
+}
+
+#style_burger.clicked .bar_2{
+    opacity: 0;
+}
+
+#style_burger.clicked .bar_3{
+    transform:rotate(45deg) translate(-5px, -7px);
+}
+
+/* ------------------- B O D Y ---------------------- */
+
+main{
+    padding: 2rem;
+}
+
+section > article{
+    padding: 1rem;
+    margin: 1rem;
+
+}
+
+section > article h2{
+    text-align: center;
+}
+
+/* ------------------- F O O T E R ---------------------- */
+
+section > div{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    
+}
+
+section > div > p{
+    text-align: center;
+}
+
+
+
+/* **********css pour desktop home******************* */
+
+@media screen and (min-width:1025px){
+
+
+    /* ------------------- M E N U ---------------------- */
+
+    nav{
+        z-index: 1;
+        left: -25%;
+        width: 25%;
+    }
+
+    #style_burger{
+        z-index:1;
+    }
+
+    /* ------------------- burger ---------------------- */
+
+    /* Animations pour le menu slide */
+    @keyframes slideRight {
+	    from {
+            left:-25%;
+        }
+	    to {
+            left:0%;
+        }
+    }
+
+    @keyframes slideLeft {
+	    from {
+            left:0%;
+        }
+	    to {
+            left:-25%;
+        }
+    }
+}
