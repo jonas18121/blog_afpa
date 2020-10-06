@@ -34,8 +34,8 @@ table{
 
 :root {
     --white: #fff;
-    --brown: brown; 
-    --black: black;
+    --brown: rgba(165,42,42, 0.4);
+    --black: rgb(2, 1, 1, 0.9);
 }
 
 /* ------------------- M E N U ---------------------- */
