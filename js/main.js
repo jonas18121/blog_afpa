@@ -8,6 +8,10 @@ let burger = document.querySelector('#style_burger');
 
 ///////////////// fonction
 
+
+
+///////////////// programme
+
 document.addEventListener('DOMContentLoaded', function()
 {
     // Créé un "toggle class" en Javascrit natif (compatible partout)
@@ -33,6 +37,3 @@ document.addEventListener('DOMContentLoaded', function()
     
     }, false);
 });
-
-
-///////////////// programme
